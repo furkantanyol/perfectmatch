@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -5,6 +9,41 @@ body {
 
 main {
     position: relative;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.column {
+    flex: 25%;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100%;
+    padding: 2rem;
+}
+
+.red {
+    background-color: #E82500;
+}
+
+.pink {
+    background-color: #F54F91;
+}
+
+.purple {
+    background-color: #E0316A;
+}
+
+.white {
+    background-color: white;
 }
 
 #loading-image {
@@ -31,4 +70,52 @@ main {
 #background-image {
     width: 100%;
     height: auto;
+}
+
+/*phones*/
+@media only screen and (max-width: 480px) {
+    .logo {
+        padding: 0;
+    }
+
+    #coming-soon-image {
+        width: 175px;
+    }
+
+    #loading-image {
+        width: 120px;
+    }
+
+}
+
+/*phones*/
+@media only screen and (max-height: 480px) {
+    .logo {
+        padding: 0;
+    }
+
+    #coming-soon-image {
+        width: 175px;
+        margin: 50px auto auto;
+    }
+
+    #loading-image {
+        width: 100px;
+        margin: auto auto 50px;
+    }
+
+}
+
+/*tablets*/
+@media only screen and (max-width: 768px) {
+    .logo {
+        padding: 1rem;
+    }
+}
+
+/*small screen laptop*/
+@media only screen and (max-width: 1024px) {
+    .logo {
+        padding: 1rem;
+    }
 }
